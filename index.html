@@ -193,8 +193,8 @@
     </section>
 
     <section id="parcours">
+        <h2>Mon Parcours</h2>
         <div class="section-box">
-            <h2>Mon Parcours</h2>
 
             <!-- Etudes -->
             <div class="parcours-item" style="--bg-url: url('../images/but-info.png')">
@@ -434,12 +434,9 @@
         </div>
     </section>
     <script>
-    const form = document.getElementById("contact-form");
-    const success = document.getElementById("success-message");
-    
-    form.addEventListener("submit", function(e) {
+        form.addEventListener("submit", function (e) {
         e.preventDefault();
-    
+
         fetch(form.action, {
             method: "POST",
             body: new FormData(form),
@@ -448,7 +445,7 @@
             form.reset();
             success.style.display = "block";
         });
-    });
+        });
     </script>
 
     <footer>
