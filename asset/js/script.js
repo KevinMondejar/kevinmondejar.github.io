@@ -155,3 +155,19 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     alert("Le message ne doit pas dépasser 500 caractères !");
   }
 });
+
+const form = document.getElementById("contact-form");
+const success = document.getElementById("success-message");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(() => {
+    form.reset();
+    success.style.display = "block";
+  });
+});
