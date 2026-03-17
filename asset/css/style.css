@@ -18,7 +18,7 @@ html {
   --text: white;
   --subtitle: white;
   --accent: #EEA02A;
-
+  --darken: #8d5e18;
 }
 
 body.light {
@@ -28,6 +28,7 @@ body.light {
   --text: #111;
   --subtitle: #caefff;
   --accent: #38bdf8;
+  --darken: #91d3f0;
 }
 
 /* BASE */
@@ -576,7 +577,7 @@ body.light .hero-bg {
 }
 
 .project-link:hover {
-  background: darken(var(--accent), 10%);
+  background: var(--darken);
 }
 
 .disable {
@@ -612,7 +613,7 @@ body.light .hero-bg {
 }
 
 .toggle-desc:hover {
-  background: darken(var(--accent), 10%);
+  background: var(--darken);
 }
 
 .project-button{
@@ -670,7 +671,7 @@ body.light .hero-bg {
 }
 
 #contact-form button:hover {
-  background: darken(var(--accent), 10%);
+  background: var(--darken);
 }
 
 /* FOOTER */
