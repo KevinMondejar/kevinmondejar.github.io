@@ -434,6 +434,21 @@
         </div>
     </section>
 
+    <script>
+        form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        }).then(() => {
+            form.reset();
+            success.style.display = "block";
+        });
+        });
+    </script>
+    
     <footer>
         <div class="footer-box">
             <p>Suivez-moi :</p>
