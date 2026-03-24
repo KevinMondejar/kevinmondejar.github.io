@@ -168,5 +168,6 @@ form.addEventListener("submit", function (e) {
     headers: { 'Accept': 'application/json' }
   }).then(() => {
     form.reset();
+    success.style.display = "block";
   });
 });
